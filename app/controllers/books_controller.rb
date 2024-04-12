@@ -8,12 +8,14 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to book_path(@book.id)
     else
-      redirect_to '/books'
+      @books = Book.all
+      render :index
     end
   end
 
   def index
     @books = Book.all
+    @book = Book.new
   end
 
   def show
@@ -37,8 +39,7 @@ class BooksController < ApplicationController
   end
 
   private
-
   def book_params
-    params.permit(:title, :body)
+    params.require(:book).permit(:title, :body)
   end
 end
