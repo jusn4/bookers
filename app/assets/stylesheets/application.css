@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+body{
+  margin: 30px 0 0 30px;
+}
+
+.top-m{
+  padding:30px 0 0 30px;
+  line-height:50px;
+}
+
+.book-list{
+  width:50%;
+  text-align: left;
+  font-size: 15px
+}
+
+.book-column{
+  text-align: center
+}
+
+.new-book{
+  margin-top: 15px
+}
+
+.show-book{
+  padding:0 0 15px 30px;
+}
+
+.book-title{
+  margin-bottom: 15px;
+  display: flex
+}
+
+.book-body{
+  display: flex;
+}
+
+.page-manu{
+  display: flex;
+  font-size: 15px;
+}
